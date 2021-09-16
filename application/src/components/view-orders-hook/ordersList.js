@@ -17,7 +17,7 @@ const OrdersList = ({orders, setOrders}) => {
     return orders.map(order => {
         
         const createdDate = new Date(order.createdAt);
-        let hours = createdDate.getHours();
+        let hours = createdDate.Date.prototype.getHours();
         let minutes = createdDate.getMinutes() %12;
         let seconds = createdDate.getSeconds() %12;
 
