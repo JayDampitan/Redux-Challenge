@@ -24,7 +24,6 @@ export default function ViewOrders(props) {
             <div className="container-fluid">
                 <OrdersList
                     orders={orders}
-                    setOrders={setOrders}
                 />
             </div>
         </Template>
