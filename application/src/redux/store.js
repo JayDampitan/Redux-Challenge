@@ -1,11 +1,6 @@
-// import { createStore, applyMiddleware } from 'redux'
-import ReduxThunk from "redux-thunk";
 import { configureStore } from "@reduxjs/toolkit";
-import authSlice from "./reducers/authReducer";
-import reducers from "./reducers";
-import allReducers from "./reducers";
+import authSlice from "../components/login/loginSlice";
 
-// const store = createStore(reducers, {}, applyMiddleware(ReduxThunk));
 
 const store = configureStore({
   reducer: { 
