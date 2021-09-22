@@ -10,7 +10,7 @@ const Nav = () => {
 
     const onLogOut = () => {
         dispatch(logout())
-        history.push("/")
+        history.push("/login")
     }
     
     return (
