@@ -9,19 +9,10 @@ const OrdersList = ({orders, setOrders}) => {
     );
     
     // ------------Attemp to delete an item ordered
-    // const deleteItem = (id) => {
-    //     const newOrders = orders.filter((order) => order.id !== id)
-    //     setOrders(newOrders)
-    // }
-
-    // const deleteItem = (id) => {
-    //     let newOrders = [...orders];
-    //     newOrders.splice(
-    //         newOrders.findIndex((item) => item._id === id )
-    //     )
-    // }
-
-
+    const deleteItem = (id) => {
+        let newOrders = orders.filter((order) => order._id !== id)
+        setOrders(newOrders)
+    }
 
 
     return orders.map(order => {
@@ -54,7 +45,7 @@ const OrdersList = ({orders, setOrders}) => {
                 </div>
                 <div className="col-md-4 view-order-right-col">
                     <button className="btn btn-success">Edit</button>
-                    <button className="btn btn-danger">Delete</button>
+                    <button onClick={() => deleteItem(order._id)} className="btn btn-danger">Delete</button>
                 </div>
             </div>
         );

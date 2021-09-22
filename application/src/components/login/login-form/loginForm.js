@@ -44,13 +44,6 @@ const LoginForm = (props) => {
         >
           Login
         </button>
-        <button
-          onClick={() => console.log(email)}
-          type="submit"
-          className="btn btn-primary"
-        >
-          Test
-        </button>
       </div>
     </form>
   );
