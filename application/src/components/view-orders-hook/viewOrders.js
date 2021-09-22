@@ -7,6 +7,8 @@ import './viewOrders.css';
 export default function ViewOrders(props) {
     const [orders, setOrders] = useState([]);
 
+   
+
     useEffect(() => {
         fetch(`${SERVER_IP}/api/current-orders`)
             .then(response => response.json())
@@ -19,11 +21,14 @@ export default function ViewOrders(props) {
             });
     }, [])
 
+   
+
     return (
         <Template>
             <div className="container-fluid">
                 <OrdersList
                     orders={orders}
+                    setOrders={setOrders}
                 />
             </div>
         </Template>

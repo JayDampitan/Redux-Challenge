@@ -1,12 +1,28 @@
 import React from 'react';
 
-const OrdersList = (props) => {
-    const { orders } = props;
-    if ( !props ||!props.orders || !orders.length) return (
+const OrdersList = ({orders, setOrders}) => {
+   
+    if ( !orders || !orders.length) return (
         <div className="empty-orders">
             <h2>There are no orders to display</h2>
         </div>
     );
+    
+    // ------------Attemp to delete an item ordered
+    // const deleteItem = (id) => {
+    //     const newOrders = orders.filter((order) => order.id !== id)
+    //     setOrders(newOrders)
+    // }
+
+    // const deleteItem = (id) => {
+    //     let newOrders = [...orders];
+    //     newOrders.splice(
+    //         newOrders.findIndex((item) => item._id === id )
+    //     )
+    // }
+
+
+
 
     return orders.map(order => {
 
