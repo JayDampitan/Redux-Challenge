@@ -73,17 +73,10 @@ const OrderForm = (props) => {
           >
             Order It!
           </button>
-          <button
-            type="button"
-            className="order-btn"
-            onClick={() => console.log(auth)}
-          >
-           Test
-          </button>
         </form>
       </div>
     </Template>
   );
-}
+};
 
 export default OrderForm;
